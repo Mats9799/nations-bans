@@ -11,7 +11,8 @@ namespace SpigotBans
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddTransient<IBanRepository, FakeBanRepository>();
+            services.AddDbContext<ApplicationDbContext>();
+            services.AddTransient<IBanRepository, EFBanRepository>();
         }
         
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

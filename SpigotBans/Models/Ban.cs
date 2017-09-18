@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SpigotBans.Models
 {
@@ -7,8 +9,11 @@ namespace SpigotBans.Models
         public DateTime BanDate { get; set; }
 
         public DateTime PardonDate { get; set; }
-
+        
         public Guid PlayerUUID { get; set; }
+
+        [Key]
+        public int ID { get; set; }
 
         public string PlayerName { get; set; }
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SpigotBans.Models;
+using System.Linq;
 
 namespace SpigotBans.Controllers
 {
@@ -14,7 +15,7 @@ namespace SpigotBans.Controllers
 
         public IActionResult Index()
         {
-            return View(repository.GetBans());
+            return View(repository.GetBans().OrderByDescending(b => b.BanDate).Take(100));
         }
     }
 }
