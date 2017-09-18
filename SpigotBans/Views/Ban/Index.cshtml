@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Ban>
+<table cellpadding="5px">
+    <thead>
+        <tr>
+            <th>UUID</th>
+            <th>Name</th>
+            <th>Banned by</th>
+            <th>Reason</th>
+            <th>Date of ban</th>
+            <th>Banned until</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Ban ban in Model)
+        {
+        <tr>
+            <th>@ban.PlayerUUID</th>
+            <th>@ban.PlayerName</th>
+            <th>@ban.StaffName</th>
+            <th>@ban.Reason</th>
+            <th>@ban.BanDate</th>
+            <th>@ban.PardonDate</th>
+        </tr>
+        }
+    </tbody>
+</table>
