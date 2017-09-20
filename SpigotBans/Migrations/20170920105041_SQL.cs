@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace SpigotBans.Migrations
 {
-    public partial class Banadded : Migration
+    public partial class SQL : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,7 +13,7 @@ namespace SpigotBans.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("MySql:ValueGeneratedOnAdd", true),
                     BanDate = table.Column<DateTime>(nullable: false),
                     PardonDate = table.Column<DateTime>(nullable: false),
                     PlayerName = table.Column<string>(nullable: true),

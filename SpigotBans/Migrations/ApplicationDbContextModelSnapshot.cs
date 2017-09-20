@@ -13,8 +13,7 @@ namespace SpigotBans.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "1.1.2")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "1.1.2");
 
             modelBuilder.Entity("SpigotBans.Models.Ban", b =>
                 {

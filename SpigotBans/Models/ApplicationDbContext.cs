@@ -6,11 +6,9 @@ namespace SpigotBans.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var conn = @"data source=(LocalDb)\MSSQLLocalDB;" +
-                       "initial catalog=SpigotBans;integrated security=True;" +
-                       "MultipleActiveResultSets=True;App=EntityFramework";
+            var conn = "server=127.0.0.1;userid=root;password=;database=nations";
 
-            optionsBuilder.UseSqlServer(conn);
+            optionsBuilder.UseMySql(conn);
         }
 
         public DbSet<Ban> Bans { get; set; }

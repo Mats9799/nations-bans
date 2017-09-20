@@ -8,14 +8,13 @@ using SpigotBans.Models;
 namespace SpigotBans.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170918163254_Ban added")]
-    partial class Banadded
+    [Migration("20170920105041_SQL")]
+    partial class SQL
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "1.1.2")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "1.1.2");
 
             modelBuilder.Entity("SpigotBans.Models.Ban", b =>
                 {
